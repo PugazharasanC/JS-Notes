@@ -8,60 +8,61 @@ Example:
 var num = 10;
 ```
 KeyWord => Compiler known word => it is already defined in programming language itself
-Examples:
+Keywords in JS:
 ```
 var, let, const, function, if, else, for, while, break, continue, switch, case, default, do, return, try, catch, throw, typeof, instanceof, new, delete, in, instanceof, this, super, class, extends, export, import, async, await, yield, debugger, null, undefined, true, false, NaN, Infinity,
 ```
 DataType => It means the type of data which we are going to store
->Number => 1,2,3,-1,-5,-100, 10.5, 25.65
->String => "", ''
->Array => [<any number of data> , <any type of data>]
++ Number => 1,2,3,-1,-5,-100, 10.5, 25.65
++ String => "", ''
++ Array => [<any number of data> , <any type of data>]
 How to access the values from the array?
-WE have to use index => index starts from zero(0) and goes till length-1
->first element index is 0, second element index is 1
+> WE have to use index => index starts from zero(0) and goes till length-1
+
+> first element index is 0, second element index is 1
 
 # Procedure to follow while starting coding.
->whenever we are starting a program, we have to check the userInput by printing it in console.
->Whatever the input format, we have to change it to our own format.
->now we have to implement our logic to get the answer
+- whenever we are starting a program, we have to check the userInput by printing it in console.
+- Whatever the input format, we have to change it to our own format.
+- now we have to implement our logic to get the answer
 
 Typecasting => converting data from one type to another type
 String to Number => We have to use one of the following
->parseInt
+> parseInt
 ```
 var num = parseInt("1234")
 ```
->parseFloat
+> parseFloat
 ```
 var num = parseFloat("1234.5")
 ```
->Number
+> Number
 ```
 var num = Number("1234" or "1234.5")
 ```
->Using '+'
+> Using '+'
 ```
 var num = +"1234" or +"1234.5"
 ```
 # converting array of strings to array of numbers
->.map(Number)
+> .map(Number)
 ```
 var numArr = arr.map(Number)
 ```
 # Code Blocks {}
->{} is used to specify block of code or grouping code
+> {} is used to specify block of code or grouping code
 
 #Operator
->Arithmatic Operator => +,-,*,/,%
->Relational Operator => < , > , <= , >= ,== ,!=, ===, !==
->Logical Operator => && , || , !
->Assignment Operator => =, +=,-=,*=
->Conditional Operator => ?:
++ Arithmatic Operator => +,-,*,/,%
++ Relational Operator => < , > , <= , >= ,== ,!=, ===, !==
++ Logical Operator =+ && , || , !
++ Assignment Operator => =, +=,-=,*=
++ Conditional Operator => ?:
 
 #Looping Statements
->For loop
->while loop
->do...while loop
++ For loop
++ while loop
++ do...while loop
 
 # Tasks
 
