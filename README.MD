@@ -2,12 +2,15 @@
 
 
 varibale => Value box => can be updated any time => can access the value anytime
+
 How to declare a variable => <keyword> <variable_name> = <value>;
+
 Example:
 ```
 var num = 10;
 ```
 KeyWord => Compiler known word => it is already defined in programming language itself
+
 Keywords in JS:
 ```
 var, let, const, function, if, else, for, while, break, continue, switch, case, default, do, return, try, catch, throw, typeof, instanceof, new, delete, in, instanceof, this, super, class, extends, export, import, async, await, yield, debugger, null, undefined, true, false, NaN, Infinity,
