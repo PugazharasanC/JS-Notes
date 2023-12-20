@@ -4,58 +4,58 @@
 
 // 07/09/2023
 
-// ! varibale => Value box => can be updated any time => can access the value anytime
-// ! How to declare a variable => <keyword> <variable_name> = <value>;
-// ? Example => var num = 10;
-// ! KeyWord => Compiler known word => it is already defined in programming language itself
-// ? Example => var
-// ! DataType => It means the type of data which we are going to store
-// ? Number => 1,2,3,-1,-5,-100, 10.5, 25.65
-// ? String => "", ''
-// ?  Array => [<any number of data> , <any type of data>]
-// ! How to access the values from the array?
-// ? WE have to use index => index starts from zero(0) and goes till length-1
-// ? first element index is 0, second element index is 1
+ varibale => Value box => can be updated any time => can access the value anytime
+ How to declare a variable => <keyword> <variable_name> = <value>;
+ Example => var num = 10;
+ KeyWord => Compiler known word => it is already defined in programming language itself
+ Example => var
+ DataType => It means the type of data which we are going to store
+ Number => 1,2,3,-1,-5,-100, 10.5, 25.65
+ String => "", ''
+  Array => [<any number of data> , <any type of data>]
+ How to access the values from the array?
+ WE have to use index => index starts from zero(0) and goes till length-1
+ first element index is 0, second element index is 1
 
 // 08/09/2023
-// ? Procedure to follow while starting coding.
-// TODO whenever we are starting a program, we have to check the userInput by printing it in console.
-// TODO Whatever the input format, we have to change it to our own format.
-// TODO now we have to implement our logic to get the answer
-// ! Typecasting => converting data from one type to another type
-// ! String to Number => We have to use one of the following
-// * parseInt => var num = parseInt("1234")
-// * parseFloat => var num = parseFloat("1234.5")
-// * Number => var num = Number("1234" or "1234.5")
-// * + => var num = +"1234" or +"1234.5"
-// ! converting array of strings to array of numbers
-// * .map(Number) => var numArr = arr.map(Number)
-// ! Code Blocks {}
-// * {} is used to specify block of code or grouping code
+ Procedure to follow while starting coding.
+ whenever we are starting a program, we have to check the userInput by printing it in console.
+ Whatever the input format, we have to change it to our own format.
+ now we have to implement our logic to get the answer
+ Typecasting => converting data from one type to another type
+ String to Number => We have to use one of the following
+ parseInt => var num = parseInt("1234")
+ parseFloat => var num = parseFloat("1234.5")
+ Number => var num = Number("1234" or "1234.5")
+ + => var num = +"1234" or +"1234.5"
+ converting array of strings to array of numbers
+ .map(Number) => var numArr = arr.map(Number)
+ Code Blocks {}
+ {} is used to specify block of code or grouping code
 
 // 11/09/2023
-// ! Operator
-// * Arithmatic Operator => +,-,*,/,%
-// * Relational Operator => < , > , <= , >= ,== ,!=, ===, !==
-// * Logical Operator => && , || , !
-// * Assignment Operator => =, +=,-=,*=
-// * Conditional Operator => ?:
+ Operator
+ Arithmatic Operator => +,-,*,/,%
+ Relational Operator => < , > , <= , >= ,== ,!=, ===, !==
+ Logical Operator => && , || , !
+ Assignment Operator => =, +=,-=,*=
+ Conditional Operator => ?:
 
 // 12/09/2023
-// ! Looping Statements
-// * For loop
-// * while loop
-// * do...while loop
+ Looping Statements
+ For loop
+ while loop
+ do...while loop
 
-// TODO Num => Super Pugazh Number => 1563548 => 001+563+548 => if sum is even => Super pugazh, otherwise it is not a super pugazh number
+ Num => Super Pugazh Number => 1563548 => 001+563+548 => if sum is even => Super pugazh, otherwise it is not a super pugazh number
 
-// TODO num1, num2 => check how many numbers can divided by 3, 5 and both 3 and 5
+ num1, num2 => check how many numbers can divided by 3, 5 and both 3 and 5
 
-// !    *
-// !    * *
-// !    * * *
-// !    * * * *
-// !    * * * * *
+    *
+    * *
+    * * *
+    * * * *
+    * * * * *
 //  1  2  3  4 5
 // 16 17 18 19 6
 // 15 24 25 20 7
@@ -114,8 +114,8 @@
 
 // console.log(...arr); //Spread Operator
 
-// ? command to run
-// ! type <inputfile name> | node <js code>
+ command to run
+ type <inputfile name> | node <js code>
 
 // spread & rest operators => ...
 
