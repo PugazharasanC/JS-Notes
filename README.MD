@@ -386,11 +386,11 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    :memo: **Note:** The while loop checks the condition before the block execution. If the condition is initially false, the block of code may not run at all.
 
 ## **For loop:**
-   The for loop is used to execute a block of code a specified number of times. The condition is checked after executing the block of code.
+   The for loop is used to execute a block of code a specified number of times or until the condition fails. The condition is checked after executing the block of code.
 
    ### Syntax
    ```javascript
-   for (initialization; condition; increment) {
+   for (initialization; condition; alteration) {
       // code block to be executed
    }
    ```
@@ -414,7 +414,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    + The `for` keyword is followed by three expressions in parentheses, separated by semicolons.
      + The first expression is executed only once, when the loop starts. This expression is used to initialize the loop variable.
      + The second expression is evaluated before every iteration of the loop. If the expression evaluates to `true`, the loop body is executed. If the expression evaluates to `false`, the loop terminates.
-     + The third expression is executed at the end of every iteration of the loop. This expression is used to increment or decrement the loop variable, thereby controlling the loop flow.
+     + The third expression is executed at the end of every iteration of the loop. This expression is used to alter the loop variable, thereby controlling the loop flow.
    + The loop terminates when the condition becomes `false`.
 
 
