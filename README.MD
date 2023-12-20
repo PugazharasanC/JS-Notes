@@ -364,7 +364,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    while(count < 5) {
       console.log("Count: " + count);
       count++;
-   } while (count < 5);
+   }
 
    console.log("Loop Finished");
    ```
