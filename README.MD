@@ -18,7 +18,11 @@ Keywords in JavaScript are compiler-known words that are already defined in the 
 ## List of Keywords:
 
 ```javascript
-var, let, const, function, if, else, for, while, break, continue, switch, case, default, do, return, try, catch, throw, typeof, instanceof, new, delete, in, this, super, class, extends, export, import, async, await, yield, debugger, null, undefined, true, false, NaN, Infinity
+var, let, const, function, if, else, for, while, break,
+continue, switch, case, default, do, return, try, catch, throw,
+typeof, instanceof, new, delete, in, this, super, class,
+extends, export, import, async, await, yield, debugger, null,
+undefined, true, false, NaN, Infinity
 ```
 
 These keywords play essential roles in defining the structure and behavior of JavaScript code.
@@ -29,41 +33,111 @@ These keywords play essential roles in defining the structure and behavior of Ja
  **Data Type** refers to the type of data we store in programming.
 
 ## Number
+Number datatype is used to store numeric values. It is the combination of integer and floating point numbers.
 - Examples: 1, 2, 3, -1, -5, -100, 10.5, 25.65
 
+  ```javascript
+  var num = 10;
+  var num1 = -10.5;
+  var num2 = 10.5e5; // 1050000
+  var num3 = 10.5E-5; // 0.000105
+  console.log(typeof num); // number
+  ```
+:memo: **Note:** typeof returns the data type of the variable.
 ## String
-- Examples: `" "` or `' '`
-
+String datatype is used to store textual data. It is a sequence of characters which is enclosed in double or single quotes.
+- Example: `"Hello World"` or `'Hello World'`
+  ```javascript
+  var str = 'Hello World';
+  console.log(typeof str); // string
+  ```
 
 ## Object
 - A collection of key-value pairs.
 - Structure: `{<key>: <value>, <key>: <value>,...}`
-- ### Array
-  - Structure: `[<any number of data>, <any type of data>]`
-- ### Null
-  - Represents the absence of any object value.
+  ```javascript
+  var obj = {
+    name: 'Pugazharasan C',
+    age: 25,
+    city: 'Trichy'
+    };
+    console.log(typeof obj); // object
+    console.log(obj.name); // Pugazharasan C
+    console.log(obj["age"]); // 25
+  ```
+### Array
+- A collection of data.
+- Array is a special type of object.
+- The values are stored in the order in which they are added.
+- In order to access the values in an array, we use the index.
+- Structure: `[<any number of data>, <any type of data>]`
+  ```javascript
+  var arr = [1, 2, 3, 4];
+  console.log(typeof arr); // object
+  console.log(arr[0]); // 1
+  console.log(arr[3]); // 4
+  console.log(arr.length); // 4
+  const dataArray = ['apple', 'banana', 'cherry'];
+  const firstElement = dataArray[0]; // 'apple'
+  const secondElement = dataArray[1]; // 'banana'
+  ```
+:memo: **Note:** The length property of an array returns the number of elements in the array.
+
+:memo: **Note:** Index starts from zero(0) and goes to length-1.
+
+### Null
+- null is a special keyword that represents the absence of any object value.
+  ```javascript
+  var obj = null;
+  console.log(typeof obj); // object
+  ```
 
 ## Boolean
-- Represents true or false values.
+- Boolean is a data type that can only have two values: true or false.
+- Boolean values are used to represent conditions.
+- Example: `if (true) { console.log('True'); }`
+  ```javascript
+  var bool = true;
+  console.log(bool); // true
+  console.log(typeof bool); // boolean
+  ```
+:memo: **Note:** All the relational operators return a boolean value.
 
 ## Undefined
 - Indicates a variable has been declared but not assigned a value.
+- In an Object literal, if a property is not defined, it is automatically assigned the value of undefined.
+- Value and the type of undefined are undefined.
+- Example:
+  ```javascript
+  var name;
+  console.log(name); // undefined
+  var obj = {
+    name: 'Pugazharasan C',
+    age: 25,
+    city: 'Trichy'
+    };
+    console.log(obj.name); // Pugazharasan C
+    console.log(obj.address); // undefined
+    console.log(typeof undefined); // undefined
+  ```
 
 ## Symbol
 - An immutable primitive value that is unique.
-
+- Used to create unique identifiers.
+- Example:
+  ```javascript
+  const symbol = Symbol('symbol');
+  console.log(typeof symbol); // symbol
+  console.log(symbol); // Symbol(symbol)
+  ```
 ## BigInt
 - A numeric data type that represents integers with arbitrary precision.
-
-### Accessing Values from an Array
-To access values from an array, use an index. The index starts from zero(0) and goes to length-1.
-
-Example:
-```javascript
-const dataArray = ['apple', 'banana', 'cherry'];
-const firstElement = dataArray[0]; // 'apple'
-const secondElement = dataArray[1]; // 'banana'
-```
+- BigInt is a new data type introduced in ES2020.
+- Example:
+  ```javascript
+  const bigInt = BigInt(100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000);
+  console.log(typeof bigInt); // bigint
+  ```
 
 # Coding Procedure
 
@@ -83,6 +157,8 @@ When starting a coding project, it's essential to follow a systematic procedure 
    - Ensure the logic aligns with the overall goal of the program.
 
 By adhering to this procedure, you create a structured approach to coding, making it easier to understand, maintain, and debug your code.
+
+In order to work in CodeKata you need to follow the coding procedure. For detailed explanation you can refer to the following [CODEKATA JS.md](CODEKATA%20JS.md)
 
 # Typecasting in JavaScript
 
@@ -173,6 +249,8 @@ Arithmatic operators are used to perform mathematical operations on numbers.
   ```
   :memo: **Note:** The addition operator can also be used to concatenate strings.
 
+  :info: **Info:** Concatenate means to join two strings together.
+
 + **Subtraction (`-`):**
   ```javascript
   var num = 10;
@@ -241,6 +319,7 @@ Relational operators are used to compare two values. The result of the compariso
   Example:
   ```javascript
   console.log(10 == "10") // true
+  console.log(1 == true) // true
   ```
 + **Not Equal To (`!=`):**
   ```javascript
@@ -258,6 +337,7 @@ Relational operators are used to compare two values. The result of the compariso
   Example:
   ```javascript
   console.log(10 === "10") // false
+  console.log(1 === true) // false
   ```
 + **Strict Not Equal To (`!==`):**
   ```javascript
@@ -274,11 +354,13 @@ Logical operators are used to combine the results of two or more expressions whi
   console.log(true && false) // false
   ```
   :memo: **Note:** The logical AND operator returns the first expression which evaluates to `false`. If all the expressions evaluate to `true`, the logical AND operator returns the last expression.
+
 + **Logical OR (`||`):**
   ```javascript
   console.log(true || false) // true
   ```
   :memo: **Note:** The logical OR operator returns the first expression which evaluates to `true`. If all the expressions evaluate to `false`, the logical OR operator returns the last expression.
+
 + **Logical NOT (`!`):**
   ```javascript
   console.log(!true) // false
@@ -321,8 +403,6 @@ Assignment operators are used to assign values to variables.
   var num = 10;
   num *= 20; // num = num * 20;
   console.log(num); // 200
-
-
   ```
 
 ## Conditional Operator
@@ -338,14 +418,221 @@ Conditional operator is used to execute a statement if a specified condition is 
 ## Bitwise Operators
 Bitwise operators are used to perform bitwise operations on integers.
 + **Bitwise AND (`&`):**
-+ **Bitwise OR (`|`):**
-+ **Bitwise NOT (`~`):**
-+ **Bitwise XOR (`^`):**
-+ **Left Shift (`<<`):**
-+ **Right Shift (`>>`):**
-+ **Zero Fill Right Shift (`>>>`):**
-+ **Unsigned Right Shift (`>>>`):**
 
+  Bitwise AND operator returns the bitwise AND of the two operands. The result is 1 if both the bits are 1 and 0 if both the bits are 0.
+
+  ```javascript
+  var num1 = 10;              // 1010
+  var num2 = 15;              // 1111
+  var result = num1 & num2;   //----- &
+  console.log(result); // 10  // 1010
+  ```
++ **Bitwise OR (`|`):**
+  Bitwise OR operator returns the bitwise OR of the two operands. The result is 1 if either of the bits is 1 and 0 if both the bits are 0.
+
+  ```javascript
+  var num1 = 10;              // 1010
+  var num2 = 15;              // 1111
+  var result = num1 | num2;   //----- |
+  console.log(result); // 15  // 1111
+  ```
++ **Bitwise NOT (`~`):**
+  Bitwise NOT operator returns the bitwise NOT of the operand. The result is 0 if the operand is 1 and 1 if the operand is 0.
+  ```javascript
+  var num1 = 10;               // 00001010
+  var result = ~num1;          //--------- ~
+  console.log(result); // -11  // 11110101
+  ```
+  :memo: **Note:** We can calculate the bitwise NOT of a number by doing a simple arithmatic operation.
+  ```javascript
+  var num1 = 10;
+  var result = -(num1+1); // -(10+1) = -11
+  console.log(result); // -11
+  ```
++ **Bitwise XOR (`^`):**
+  Bitwise XOR operator returns the bitwise XOR of the two operands. The result is 1 if the bits are different and 0 if the bits are same.
+  ```javascript
+  var num1 = 10;              // 00001010
+  var num2 = 15;              // 00001111
+  var result = num1 ^ num2;   //--------- ^
+  console.log(result); // 15  // 00000101
+  ```
++ **Left Shift (`<<`):**
+  Left shift operator shifts the first operand to the left by the number of bits specified by the second operand.
+  ```javascript
+  var num1 = 10;              // 00001010
+  var num2 = 2;
+  var result = num1 << num2;
+  console.log(result); // 40  // 00101000
+  // Two zero's added at the end of the binary representation of the number
+  ```
+  :memo: **Note:** The left shift operator is used to multiply the value of the left operand by 2 to the power of the value of the right operand.
+  ```javascript
+  var num1 = 10;
+  var num2 = 2;
+  var result = num1 * Math.pow(2, num2); // num1 * num2 ** 2 => 10 * 4 => 40
+  console.log(result); // 40
+  ```
++ **Right Shift (`>>`):**
+
+  Right shift operator shifts the first operand to the right by the number of bits specified by the second operand.
+  ```javascript
+  var num1 = 10;              // 00001010
+  var num2 = 2;
+  var result = num1 >> num2;
+  console.log(result); // 2  // 00000010
+  // Two bits are removed from the right side of the binary representation of the number
+  ```
+  :memo: **Note:** The right shift operator is used to divide the value of the left operand by 2 to the power of the value of the right operand.
+  ```javascript
+  var num1 = 10;
+  var num2 = 2;
+  var result = parseInt(num1 / Math.pow(2, num2)); // num1 / num2 ** 2 => 10 / 4 => 2
+  console.log(result); // 2
+  ```
+# Conditional Statements
+Conditional statements are used to execute a block of code if a specified condition is true, otherwise another block of code.
+## **If Statement:**
+The if statement is used to execute a block of code if a specified condition is true.
+### Syntax
+```javascript
+if (condition) {
+  // code block to be executed
+  // if the condition is true
+}
+```
+### Example
+```javascript
+let num1 = 10;
+let num2 = 20;
+
+let diff = num1 - num2;
+
+if(diff < 0) {
+  // This block will only be executed if the diff is negative
+  diff = -diff; // diff = diff * -1;
+}
+console.log("The difference is: " + diff); // The difference is: 10
+
+// The difference value is always positive
+```
+### Output
+```vbnet
+num is greater than 10
+```
+
+## **If...else Statement:**
+The if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
+
+### Syntax
+```javascript
+if (condition) {
+  // code block to be executed
+  // if the condition is true
+}
+else {
+  // code block to be executed
+  // if the condition is false
+  // This block is optional
+}
+```
+### Example
+```javascript
+let num1 = 10;
+if(num1 < 0){
+  console.log("num1 is negative");
+}
+else {
+  console.log("num1 is positive");
+}
+```
+### Output
+```vbnet
+num1 is positive
+```
+
+## **If...else if...else Statement:**
+The If ... else if... else statement is silimar to the if...else statement. The only difference is that we can have multiple conditions. When the condition is true, the corresponding block of code is executed. If none of the conditions is true, the last block of code is executed.
+### Syntax
+```javascript
+if (condition1) {
+  // code block to be executed
+  // if the condition1 is true
+}else if (condition2) {
+  // code block to be executed
+  // if the condition1 is false and the condition2 is true
+} else {
+  // code block to be executed
+  // when none of the conditions is true
+}
+```
+### Example
+```javascript
+let num1 = 10;
+if(num1 < 0) {
+  console.log("num1 is negative");
+} else if(num1 == 0) {
+  console.log("num1 is zero");
+} else {
+  console.log("num1 is positive");
+}
+```
+### Output
+```vbnet
+num1 is positive
+```
+
+## **Nested If...else Statement:**
+The nested if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
+
+### Syntax
+```javascript
+if (condition1) {
+  // code block to be executed
+  // if the condition1 is true
+  if (condition2) {
+    // code block to be executed
+    // if the condition1 is true and the condition2 is true
+  } else {
+    // code block to be executed
+    // if the condition1 is true and the condition2 is false
+  }
+} else {
+  // code block to be executed
+  // if the condition1 is false
+  if (condition3) {
+    // code block to be executed
+    // if the condition1 is false and the condition3 is true
+  } else {
+    // code block to be executed
+    // if the condition1 is false and the condition3 is false
+  }
+}
+```
+### Example
+```javascript
+let num1 = 10;
+if(num1 < 0) {
+  console.log("num1 is negative");
+  if(num1 == -10) {
+    console.log("num1 is -10");
+  }else{
+    console.log("num1 is not -10");
+  }
+} else {
+  console.log("num1 is positive");
+  if(num1 == 10) {
+    console.log("num1 is 10");
+  } else {
+    console.log("num1 is not 10");
+  }
+}
+```
+### Output
+```vbnet
+num1 is positive
+num1 is 10
+```
 
 # Looping Statements
 Looping statements are used to execute a block of code repeatedly. There are three types of looping statements in JavaScript:
@@ -462,3 +749,64 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    + The loop terminates when the condition becomes `false`.
    + The do...while loop is similar to the while loop but the condition is checked after executing the block of code.
    + The do...while loop is useful when you want to execute a block of code at least once.
+
+# Branching Statement
+Branching statements are used to execute different blocks of code depending on the value of a condition.
+```
+## **switch statement:**
+The switch statement is used to execute one of multiple blocks of code depending on the value of a variable.
+### Syntax
+```javascript
+switch (expression) {
+  case value1:
+    // code block to be executed if expression is value1
+    break;
+  case value2:
+    // code block to be executed if expression is value2
+    break;
+  default:
+    // code block to be executed if expression is different from value1 and value2
+}
+```
+### Example
+```javascript
+let day = "Monday";
+switch (day) {
+  case "Monday":
+    console.log("Today is Monday");
+    break;
+  case "Tuesday":
+    console.log("Today is Tuesday");
+    break;
+  case "Wednesday":
+    console.log("Today is Wednesday");
+    break;
+  case "Thursday":
+    console.log("Today is Thursday");
+    break;
+  case "Friday":
+    console.log("Today is Friday");
+    break;
+  case "Saturday":
+    console.log("Today is Saturday");
+    break;
+  case "Sunday":
+    console.log("Today is Sunday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+```
+### Output
+```vbnet
+Today is Monday
+```
+### Explanation:
++ The switch statement is used to compare a value with multiple values.
++ Switch is an alternative to if...else if...else statements.
++ The `switch` keyword is followed by an expression in parentheses.
++ The expression is evaluated and compared with each case value.
++ If the expression matches a case value, the code block inside the corresponding case is executed untill the last statement of the switch is reached or the `break` keyword is used.
++ If the expression doesn't match any case value, the code block inside the default case is executed.
++ The `break` keyword is used to terminate the switch statement.
+
