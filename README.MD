@@ -1,5 +1,76 @@
 # [JavaScript Cheat Sheet](https://drive.google.com/file/d/14mSzInQ674Drdu_iKULASF1XsCDKjJcm/view?usp=sharing)
 
+
+- [JavaScript Cheat Sheet](#javascript-cheat-sheet)
+- [Variable](#variable)
+  - [How to Declare a Variable](#how-to-declare-a-variable)
+- [Keywords in JavaScript](#keywords-in-javascript)
+  - [List of Keywords:](#list-of-keywords)
+- [Data Types in JavaScript](#data-types-in-javascript)
+  - [Number](#number)
+  - [String](#string)
+  - [Object](#object)
+    - [Array](#array)
+    - [Null](#null)
+  - [Boolean](#boolean)
+  - [Undefined](#undefined)
+  - [Symbol](#symbol)
+  - [BigInt](#bigint)
+- [Coding Procedure](#coding-procedure)
+- [Typecasting in JavaScript](#typecasting-in-javascript)
+  - [String to Number](#string-to-number)
+  - [Array of Strings to Array of Numbers](#array-of-strings-to-array-of-numbers)
+    - [`.map(Number)`](#mapnumber)
+  - [Number To String](#number-to-string)
+- [JavaScript Operators](#javascript-operators)
+  - [Arithmetic Operators](#arithmetic-operators)
+  - [Relational Operators](#relational-operators)
+  - [Logical Operators](#logical-operators)
+  - [Assignment Operators](#assignment-operators)
+  - [Conditional Operator](#conditional-operator)
+  - [Bitwise Operators](#bitwise-operators)
+- [Conditional Statements](#conditional-statements)
+  - [**If Statement:**](#if-statement)
+    - [Syntax](#syntax)
+    - [Example](#example)
+    - [Output](#output)
+  - [**If...else Statement:**](#ifelse-statement)
+    - [Syntax](#syntax-1)
+    - [Example](#example-1)
+    - [Output](#output-1)
+  - [**If...else if...else Statement:**](#ifelse-ifelse-statement)
+    - [Syntax](#syntax-2)
+    - [Example](#example-2)
+    - [Output](#output-2)
+  - [**Nested If...else Statement:**](#nested-ifelse-statement)
+    - [Syntax](#syntax-3)
+    - [Example](#example-3)
+    - [Output](#output-3)
+- [Looping Statements](#looping-statements)
+  - [**While loop:**](#while-loop)
+    - [Syntax](#syntax-4)
+    - [Example](#example-4)
+    - [Output](#output-4)
+    - [Explanation:](#explanation)
+  - [**For loop:**](#for-loop)
+    - [Syntax](#syntax-5)
+    - [Example](#example-5)
+    - [Output](#output-5)
+    - [Explanation:](#explanation-1)
+  - [do...while loop](#dowhile-loop)
+    - [Syntax](#syntax-6)
+    - [Example](#example-6)
+    - [Output](#output-6)
+    - [Explanation:](#explanation-2)
+- [Branching Statement](#branching-statement)
+  - [**switch statement:**](#switch-statement)
+    - [Syntax](#syntax-7)
+    - [Example](#example-7)
+    - [Output](#output-7)
+    - [Explanation:](#explanation-3)
+
+
+
 # Variable
 A value box that can be updated at any time and accessed whenever needed.
 
@@ -752,7 +823,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
 
 # Branching Statement
 Branching statements are used to execute different blocks of code depending on the value of a condition.
-```
+
 ## **switch statement:**
 The switch statement is used to execute one of multiple blocks of code depending on the value of a variable.
 ### Syntax
