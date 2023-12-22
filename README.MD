@@ -4,8 +4,11 @@
 - [JavaScript Cheat Sheet](#javascript-cheat-sheet)
 - [Variable](#variable)
   - [How to Declare a Variable](#how-to-declare-a-variable)
+  - [Variable Scope](#variable-scope)
+  - [Variable Naming Convention](#variable-naming-convention)
 - [Keywords in JavaScript](#keywords-in-javascript)
   - [List of Keywords:](#list-of-keywords)
+- [Var, Let and Const](#var-let-and-const)
 - [Data Types in JavaScript](#data-types-in-javascript)
   - [Number](#number)
   - [String](#string)
@@ -31,45 +34,15 @@
   - [Bitwise Operators](#bitwise-operators)
 - [Conditional Statements](#conditional-statements)
   - [**If Statement:**](#if-statement)
-    - [Syntax](#syntax)
-    - [Example](#example)
-    - [Output](#output)
   - [**If...else Statement:**](#ifelse-statement)
-    - [Syntax](#syntax-1)
-    - [Example](#example-1)
-    - [Output](#output-1)
   - [**If...else if...else Statement:**](#ifelse-ifelse-statement)
-    - [Syntax](#syntax-2)
-    - [Example](#example-2)
-    - [Output](#output-2)
   - [**Nested If...else Statement:**](#nested-ifelse-statement)
-    - [Syntax](#syntax-3)
-    - [Example](#example-3)
-    - [Output](#output-3)
 - [Looping Statements](#looping-statements)
   - [**While loop:**](#while-loop)
-    - [Syntax](#syntax-4)
-    - [Example](#example-4)
-    - [Output](#output-4)
-    - [Explanation:](#explanation)
   - [**For loop:**](#for-loop)
-    - [Syntax](#syntax-5)
-    - [Example](#example-5)
-    - [Output](#output-5)
-    - [Explanation:](#explanation-1)
   - [do...while loop](#dowhile-loop)
-    - [Syntax](#syntax-6)
-    - [Example](#example-6)
-    - [Output](#output-6)
-    - [Explanation:](#explanation-2)
 - [Branching Statement](#branching-statement)
   - [**switch statement:**](#switch-statement)
-    - [Syntax](#syntax-7)
-    - [Example](#example-7)
-    - [Output](#output-7)
-    - [Explanation:](#explanation-3)
-
-
 
 # Variable
 A value box that can be updated at any time and accessed whenever needed.
@@ -81,6 +54,98 @@ For example:
 ```javascript
 var num = 10;
 ```
+## Variable Scope
+A variable can be declared in two different ways:
+- **Global Variable:** A variable declared outside of any function is known as a global variable.
+- **Local Variable:** A variable declared inside a function is known as a local variable.
+- **Block-level Variable:** A variable declared inside a block of code is known as a block-level variable.
+
+  Example:
+  ```javascript
+  var num = 10; // global variable
+
+  function myFunction() {
+    var num = 20; // function-level variable (local to the function)
+    console.log(num); // 20
+    console.log(window.num); // 20 (assuming it's running in a browser)
+    console.log(global.num); // undefined (assuming it's not in a Node.js environment)
+    console.log(num); // 20
+    console.log(this.num); // 20
+  }
+
+  myFunction();
+
+  if (num == 10) {
+    let temp = num * 2; // block-level variable
+    console.log(temp); // 20
+  }
+  ```
+  - In `myFunction`, when we use `var num = 20;`, we create a local variable named `num` with scope limited to the function.
+  - It doesn't affect the global variable `num` (initialized as `var num = 10;`).
+  - Inside the function, `num` refers to the local variable. After the function, references to `num` outside it point to the global variable.
+  - The term "local variable" in `myFunction` means a variable limited to that function's scope.
+
+## Variable Naming Convention
+Naming convention is a set of rules for naming variables. There are many naming conventions.
+
+:memo: **Note:** The naming convention is not enforced by the JavaScript language. It is a convention that is used to improve the readability of the code.
+
+Here are some of the most common ones:
+- **Camel Case:** The first letter of each word is capitalized.
+  ```javascript
+  // used for naming variables and functions
+  var firstName = "Pugazharasan";
+  var lastName = "Chandrasekar";
+  var fullName = firstName + " " + lastName;
+  ```
+- **Pascal Case:** The first letter of each word is capitalized.
+  ```javascript
+  // used for naming classes
+  class Person {
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.fullName = firstName + " " + lastName;
+    }
+  }
+  ```
+- **Snake Case:** Each word is separated by an underscore.
+  ```javascript
+  // used for naming variables and functions
+  var first_name = "Pugazharasan";
+  var last_name = "Chandrasekar";
+  var full_name = first_name + " " + last_name;
+  ```
+- **Kebab Case:** Each word is separated by a hyphen.
+  ```javascript
+  // used for naming variables and functions
+  var first-name = "Pugazharasan";
+  var last-name = "Chandrasekar";
+  var full-name = first-name + " " + last-name;
+  ```
+- **Constant Case:** Each word is separated by an underscore and capitalized.
+  ```javascript
+  // used for naming variables and functions
+  const FIRST_NAME = "Pugazharasan";
+  const LAST_NAME = "Chandrasekar";
+  const FULL_NAME = FIRST_NAME + " " + LAST_NAME;
+  ```
+// naming convention for boolean variables
+- **Boolean Case:** Each word is separated by an underscore and capitalized.
+  ```javascript
+  // used for naming variables and functions
+  var is_logged_in = true;
+  var is_logged_out = false;
+  ```
+- **Boolean Camel Case:** The first letter of each word is capitalized.
+  ```javascript
+  // used for naming variables and functions
+  var isLoggedIn = true;
+  var isLoggedOut = false;
+  ```
+:memo: **Note:** It is not recommended to use camel case for boolean variables.
+
+:memo: **Note:** Variable names should be descriptive and meaningful. Avoid using abbreviations.
 
 # Keywords in JavaScript
 
@@ -98,6 +163,100 @@ undefined, true, false, NaN, Infinity
 
 These keywords play essential roles in defining the structure and behavior of JavaScript code.
 
+# Var, Let and Const
+
+- **var:**
+  - Declares a variable globally or locally to an entire function, regardless of block scope.
+  - Can be hoisted to the top of its scope.
+
+  Example:
+  ```javascript
+  var x = 10;
+  function example() {
+    var y = 20;
+  }
+  ```
+
+- **let:**
+  - Introduces block scope, limiting the variable's visibility to the block, statement, or expression.
+  - Does not hoist to the top of the block.
+
+  Example:
+  ```javascript
+  let a = 30;
+  if (true) {
+    let b = 40;
+  }
+  ```
+
+- **const:**
+  - Declares a constant variable with block scope, similar to let.
+  - Cannot be reassigned after declaration.
+
+  Example:
+  ```javascript
+  const PI = 3.14;
+  ```
+```mermaid
+graph LR
+
+  subgraph Keyword
+    Var[var]
+    Let[let]
+    Const[const]
+  end
+
+  subgraph Scope
+      Function-scoped[Function]
+      Block-scoped[Block]
+  end
+
+  subgraph Hoisting
+      Hoisted[Hoisted]
+      Not_Hoisted[Not hoisted]
+  end
+
+  subgraph Reassignment
+      Allowed_Reassignment[Allowed]
+      Not_Allowed_Reassignment[Not allowed]
+  end
+
+  subgraph Redeclaration
+      Allowed_Redeclaration[Allowed]
+      Not_Allowed_Redeclaration[Not Allowed]
+  end
+
+  Var ==> Function-scoped ==var==> Hoisted ==var==> Allowed_Reassignment ==var==> Allowed_Redeclaration
+  Let ==> Block-scoped ==let==> Not_Hoisted ==let==> Allowed_Reassignment ==let==> Not_Allowed_Redeclaration
+  Const ==> Block-scoped ==const==> Not_Hoisted ==const==> Not_Allowed_Reassignment ==const==> Not_Allowed_Redeclaration
+```
+## Hoisting
+- Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+- This means that the variable and function declarations are moved to the top of the function or the global scope.
+- This is useful because it allows us to use variables and functions before they are declared.
+- It is also useful because it allows us to declare variables and functions in any order.
+
+  ```javascript
+  console.log(x); // undefined
+  var x = 10;
+  console.log(x); // 10
+  ```
+  In the above example, the variable `x` is declared before it is used. But JavaScript hoists the declaration to the top of the function. That's the reason why the output is `undefined` and not `10`.
+  ```javascript
+  var x;
+  console.log(x); // undefined
+  x = 10;
+  console.log(x); // 10
+  ```
+  This is how the variable `x` is hoisted in the above example.
+
+  What will happen when we declare a variable using let in the same way?
+  ```javascript
+  console.log(x); // ReferenceError: x is not defined
+  let x = 10;
+  console.log(x); // 10
+  ```
+  In the above example, the variable `x` is declared using `let` keyword before it is used. Javascript does not hoist the declaration to the top of the function. That's the reason why the output is `ReferenceError: x is not defined` and not `undefined`.
 
 # Data Types in JavaScript
 
@@ -591,7 +750,18 @@ console.log("The difference is: " + diff); // The difference is: 10
 ```vbnet
 num is greater than 10
 ```
-
+### Flowchart
+```mermaid
+graph LR
+  A([Start]) --> B[num1 = 10
+  num2 = 20
+  diff = num1 - num2]
+  B--> E{diff < 0 ?}
+  E -->|true| F[diff = -diff]
+  E -->|false| G[/"The difference is: " + diff/]
+  F --> G
+  G --> H([End])
+```
 ## **If...else Statement:**
 The if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
 
@@ -620,6 +790,16 @@ else {
 ### Output
 ```vbnet
 num1 is positive
+```
+### Flowchart
+```mermaid
+graph LR
+  A([Start]) --> B[num1 = 10]
+  B--> C{num1 < 0 ?}
+  C -->|true| D[/"num1 is negative"/]
+  C -->|false| E[/"num1 is positive"/]
+  D --> F([End])
+  E --> F
 ```
 
 ## **If...else if...else Statement:**
@@ -652,7 +832,19 @@ if(num1 < 0) {
 ```vbnet
 num1 is positive
 ```
-
+### Flowchart
+```mermaid
+graph LR
+  A([Start]) --> B[num1 = 10]
+  B--> C{num1 < 0 ?}
+  C -->|true| D[/"num1 is negative"/]
+  C -->|false| E{num1 == 0 ?}
+  E -->|true| F[/"num1 is zero"/]
+  E -->|false| G[/"num1 is positive"/]
+  F --> H([End])
+  G --> H
+  D --> H
+```
 ## **Nested If...else Statement:**
 The nested if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
 
@@ -704,7 +896,24 @@ if(num1 < 0) {
 num1 is positive
 num1 is 10
 ```
-
+### Flowchart
+```mermaid
+graph LR
+  A([Start]) --> B[num1 = 10]
+  B--> C{num1 < 0 ?}
+  C -->|true| D[/"num1 is negative"/]
+  D--> E{num1 == -10 ?}
+  E -->|true| F[/"num1 is -10"/]
+  E -->|false| G[/"num1 is not -10"/]
+  F --> H([End])
+  G --> H
+  C --> |false| M[/"num1 is positive"/]
+  M --> I{num1 == 10 ?}
+  I -->|true| J[/"num1 is 10"/]
+  I -->|false| K[/"num1 is not 10"/]
+  J --> H
+  K --> H
+```
 # Looping Statements
 Looping statements are used to execute a block of code repeatedly. There are three types of looping statements in JavaScript:
 ## **While loop:**
@@ -720,7 +929,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    let count = 0;
 
    while(count < 5) {
-      console.log("Count: " + count);
+      console.log("Count:", count);
       count++;
    }
 
@@ -734,6 +943,17 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    Count: 3
    Count: 4
    Loop Finished
+   ```
+   ### Flowchart
+   ```mermaid
+   graph LR
+   A([Start]) --> B[count = 0]
+   B--> C{count < 5 ?}
+   C -->|true| D[/'Count:', count/]
+   C -->|false| E[/Loop Finished/]
+   D --> F[count = count + 1]
+   F --> C
+   E --> G([End])
    ```
    ### Explanation:
    + The `while` keyword is followed by a condition in parentheses.
@@ -768,6 +988,18 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    5
    Done
    ```
+   ### Flowchart
+   ```mermaid
+   graph LR
+   A([Start]) --> B[i = 1]
+   B--> C{i <= 5 ?}
+   C -->|true| D[/'i'/]
+   D --> F[i = i + 1]
+   C -->|false| E[/Done/]
+   F --> C
+   E --> G([End])
+   ```
+
    ### Explanation:
    + The `for` keyword is followed by three expressions in parentheses, separated by semicolons.
      + The first expression is executed only once, when the loop starts. This expression is used to initialize the loop variable.
@@ -810,6 +1042,20 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    Count: 4
    Loop Finished
    ```
+   ### Flowchart
+   ```mermaid
+   graph LR
+   A([Start]) --> B[count = 0]
+
+   B--> D
+   C -->|true| D[/'Count: ', count/]
+   C -->|false| E[/Loop Finished/]
+   D --> F[count = count + 1]
+   F --> C{count < 5 ?}
+   E --> G([End])
+   ```
+
+
    ### Explanation:
    + The `do` keyword is followed by a block of code.
    + The block of code is executed at least once.
@@ -871,6 +1117,36 @@ switch (day) {
 ### Output
 ```vbnet
 Today is Monday
+```
+### Flowchart
+```mermaid
+graph LR
+A([Start]) --> B[day = 'Monday']
+B --> C{day == 'Monday'?}
+C -->|true| D[/Today is Monday/]
+D --> F[break]
+F --> G[End]
+C -->|false| H{day == 'Tuesday'?}
+H -->|true| I[/Today is Tuesday/]
+I --> F
+H -->|false| J{day == 'Wednesday'?}
+J -->|true| K[/Today is Wednesday/]
+K --> F
+J -->|false| L{day == 'Thursday'?}
+L -->|true| M[/Today is Thursday/]
+M --> F
+L -->|false| N{day == 'Friday'?}
+N -->|true| O[/Today is Friday/]
+O --> F
+N -->|false| P{day == 'Saturday'?}
+P -->|true| Q[/Today is Saturday/]
+Q --> F
+P -->|false| R{day == 'Sunday'?}
+R -->|true| S[/Today is Sunday/]
+S --> F
+R -->|false| T[/Invalid day/]
+T --> G
+
 ```
 ### Explanation:
 + The switch statement is used to compare a value with multiple values.
