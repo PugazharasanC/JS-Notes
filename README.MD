@@ -748,18 +748,20 @@ console.log("The difference is: " + diff); // The difference is: 10
 ```
 ### Output
 ```vbnet
-num is greater than 10
+The difference is: 10
 ```
 ### Flowchart
+
 ```mermaid
 graph LR
-  A([Start]) --> B[num1 = 10;num2 = 20;diff = num1 - num2]
-  B--> E{diff < 0 ?}
-  E -->|true| F[diff = -diff]
-  E -->|false| G[/'The difference is: ' + diff/]
-  F --> G
-  G --> H([End])
+  A([Start]) --> B[num1 = -10]
+  B--> C{num1 < 0?}
+  C -->|true| D[num1 = -num1]
+  C -->|false| E[/'num1 is '+num1/]
+  D --> E
+  E --> G([End])
 ```
+
 ## **If...else Statement:**
 The if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
 
