@@ -753,7 +753,7 @@ num is greater than 10
 ### Flowchart
 ```mermaid
 graph LR
-  A([Start]) --> B[`num1 = 10;num2 = 20;diff = num1 - num2]
+  A([Start]) --> B[num1 = 10;num2 = 20;diff = num1 - num2]
   B--> E{diff < 0 ?}
   E -->|true| F[diff = -diff]
   E -->|false| G[/"The difference is: " + diff/]
