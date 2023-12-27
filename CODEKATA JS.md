@@ -185,16 +185,16 @@ So, in summary, the code takes user input, extracts the number to check, determi
 Let's solve more problems.
 ### Problem-Solving Checklist
 
-- [ ] **Print the `userInput` array:**
+- [x] **Print the `userInput` array:**
    - This step helps in understanding the input format and allows us to visualize the data we're working with.
 
-- [ ] **Spread values into variables:**
+- [x] **Spread values into variables:**
    - Assign meaningful variable names to different elements in the `userInput` array. For example, `numberToCheck` and `numberToPrint` are good choices.
 
-- [ ] **Convert input values to the desired data type:**
+- [x] **Convert input values to the desired data type:**
    - Since the input values are initially collected as strings, use appropriate conversion functions (`parseInt`, `parseFloat`, etc.) to convert them to the desired data type.
 
-- [ ] **Proceed to solve the problem:**
+- [x] **Proceed to solve the problem:**
    - Apply the necessary logic to solve the specific problem using the variables created. Break down the problem into smaller steps if needed.
 
 Now that you've learned how to solve a problem, let's move on to the next problem in the series.
