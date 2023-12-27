@@ -1,60 +1,70 @@
-# [JavaScript Cheat Sheet](https://drive.google.com/file/d/14mSzInQ674Drdu_iKULASF1XsCDKjJcm/view?usp=sharing)
+# 1. [JavaScript Cheat Sheet](https://drive.google.com/file/d/14mSzInQ674Drdu_iKULASF1XsCDKjJcm/view?usp=sharing)
+
+Table of Contents
+- [1. JavaScript Cheat Sheet](#1-javascript-cheat-sheet)
+- [2. JavaScript](#2-javascript)
+- [3. Variable](#3-variable)
+  - [3.1. How to Declare a Variable](#31-how-to-declare-a-variable)
+  - [3.2. Variable Scope](#32-variable-scope)
+  - [3.3. Variable Naming Convention](#33-variable-naming-convention)
+- [4. Keywords in JavaScript](#4-keywords-in-javascript)
+  - [4.1. List of Keywords:](#41-list-of-keywords)
+- [5. Var, Let and Const](#5-var-let-and-const)
+  - [5.1. Hoisting](#51-hoisting)
+- [6. Data Types in JavaScript](#6-data-types-in-javascript)
+  - [6.1. Number](#61-number)
+  - [6.2. String](#62-string)
+  - [6.3. Object](#63-object)
+  - [6.4. Boolean](#64-boolean)
+  - [6.5. Undefined](#65-undefined)
+  - [6.6. Symbol](#66-symbol)
+  - [6.7. BigInt](#67-bigint)
+- [7. Coding Procedure](#7-coding-procedure)
+- [8. Typecasting in JavaScript](#8-typecasting-in-javascript)
+  - [8.1. String to Number](#81-string-to-number)
+  - [8.2. Array of Strings to Array of Numbers](#82-array-of-strings-to-array-of-numbers)
+  - [8.3. Number To String](#83-number-to-string)
+- [9. JavaScript Operators](#9-javascript-operators)
+  - [9.1. Arithmetic Operators](#91-arithmetic-operators)
+  - [9.2. Relational Operators](#92-relational-operators)
+  - [9.3. Logical Operators](#93-logical-operators)
+  - [9.4. Assignment Operators](#94-assignment-operators)
+  - [9.5. Conditional Operator](#95-conditional-operator)
+  - [9.6. Bitwise Operators](#96-bitwise-operators)
+- [10. Conditional Statements](#10-conditional-statements)
+  - [10.1. **If Statement:**](#101-if-statement)
+  - [10.2. **If...else Statement:**](#102-ifelse-statement)
+  - [10.3. **If...else if...else Statement:**](#103-ifelse-ifelse-statement)
+  - [10.4. **Nested If...else Statement:**](#104-nested-ifelse-statement)
+- [11. Looping Statements](#11-looping-statements)
+  - [11.1. **While loop:**](#111-while-loop)
+  - [11.2. **For loop:**](#112-for-loop)
+  - [11.3. do...while loop](#113-dowhile-loop)
+- [12. Branching Statement](#12-branching-statement)
+  - [12.1. **switch statement:**](#121-switch-statement)
+- [13. Break and Continue](#13-break-and-continue)
+  - [13.1. Break](#131-break)
+  - [13.2. Continue](#132-continue)
+- [14. Other Loops](#14-other-loops)
+  - [14.1. **for...in loop:**](#141-forin-loop)
+  - [14.2. **for...of loop:**](#142-forof-loop)
+  - [14.3. **Thank you for reading my article.**](#143-thank-you-for-reading-my-article)
 
 
-- [JavaScript Cheat Sheet](#javascript-cheat-sheet)
-- [Variable](#variable)
-  - [How to Declare a Variable](#how-to-declare-a-variable)
-  - [Variable Scope](#variable-scope)
-  - [Variable Naming Convention](#variable-naming-convention)
-- [Keywords in JavaScript](#keywords-in-javascript)
-  - [List of Keywords:](#list-of-keywords)
-- [Var, Let and Const](#var-let-and-const)
-- [Data Types in JavaScript](#data-types-in-javascript)
-  - [Number](#number)
-  - [String](#string)
-  - [Object](#object)
-    - [Array](#array)
-    - [Null](#null)
-  - [Boolean](#boolean)
-  - [Undefined](#undefined)
-  - [Symbol](#symbol)
-  - [BigInt](#bigint)
-- [Coding Procedure](#coding-procedure)
-- [Typecasting in JavaScript](#typecasting-in-javascript)
-  - [String to Number](#string-to-number)
-  - [Array of Strings to Array of Numbers](#array-of-strings-to-array-of-numbers)
-    - [`.map(Number)`](#mapnumber)
-  - [Number To String](#number-to-string)
-- [JavaScript Operators](#javascript-operators)
-  - [Arithmetic Operators](#arithmetic-operators)
-  - [Relational Operators](#relational-operators)
-  - [Logical Operators](#logical-operators)
-  - [Assignment Operators](#assignment-operators)
-  - [Conditional Operator](#conditional-operator)
-  - [Bitwise Operators](#bitwise-operators)
-- [Conditional Statements](#conditional-statements)
-  - [**If Statement:**](#if-statement)
-  - [**If...else Statement:**](#ifelse-statement)
-  - [**If...else if...else Statement:**](#ifelse-ifelse-statement)
-  - [**Nested If...else Statement:**](#nested-ifelse-statement)
-- [Looping Statements](#looping-statements)
-  - [**While loop:**](#while-loop)
-  - [**For loop:**](#for-loop)
-  - [do...while loop](#dowhile-loop)
-- [Branching Statement](#branching-statement)
-  - [**switch statement:**](#switch-statement)
+# 2. JavaScript
+JavaScript is a programming language that is used to build interactive web pages and web applications. It is the third layer of the layered language model, alongside HTML and CSS. It is a cross-platform, object-oriented scripting language. JavaScript is prototype-based with first-class functions, making it a multi-paradigm language, supporting event-driven, functional, and imperative (including object-oriented and prototype-based) programming styles. It has been standardized in the ECMAScript language specification. JavaScript is also a cross-platform language.
 
-# Variable
+# 3. Variable
 A value box that can be updated at any time and accessed whenever needed.
 
-## How to Declare a Variable
+## 3.1. How to Declare a Variable
 Use the syntax `<keyword> <variable_name> = <value>;`.
 
 For example:
 ```javascript
 var num = 10;
 ```
-## Variable Scope
+## 3.2. Variable Scope
 A variable can be declared in two different ways:
 - **Global Variable:** A variable declared outside of any function is known as a global variable.
 - **Local Variable:** A variable declared inside a function is known as a local variable.
@@ -85,7 +95,7 @@ A variable can be declared in two different ways:
   - Inside the function, `num` refers to the local variable. After the function, references to `num` outside it point to the global variable.
   - The term "local variable" in `myFunction` means a variable limited to that function's scope.
 
-## Variable Naming Convention
+## 3.3. Variable Naming Convention
 Naming convention is a set of rules for naming variables. There are many naming conventions.
 
 :memo: **Note:** The naming convention is not enforced by the JavaScript language. It is a convention that is used to improve the readability of the code.
@@ -147,11 +157,11 @@ Here are some of the most common ones:
 
 :memo: **Note:** Variable names should be descriptive and meaningful. Avoid using abbreviations.
 
-# Keywords in JavaScript
+# 4. Keywords in JavaScript
 
 Keywords in JavaScript are compiler-known words that are already defined in the programming language itself.
 
-## List of Keywords:
+## 4.1. List of Keywords:
 
 ```javascript
 var, let, const, function, if, else, for, while, break,
@@ -163,7 +173,7 @@ undefined, true, false, NaN, Infinity
 
 These keywords play essential roles in defining the structure and behavior of JavaScript code.
 
-# Var, Let and Const
+# 5. Var, Let and Const
 
 - **var:**
   - Declares a variable globally or locally to an entire function, regardless of block scope.
@@ -230,7 +240,7 @@ graph LR
   Let ==> Block-scoped ==let==> Not_Hoisted ==let==> Allowed_Reassignment ==let==> Not_Allowed_Redeclaration
   Const ==> Block-scoped ==const==> Not_Hoisted ==const==> Not_Allowed_Reassignment ==const==> Not_Allowed_Redeclaration
 ```
-## Hoisting
+## 5.1. Hoisting
 - Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
 - This means that the variable and function declarations are moved to the top of the function or the global scope.
 - This is useful because it allows us to use variables and functions before they are declared.
@@ -258,11 +268,11 @@ graph LR
   ```
   In the above example, the variable `x` is declared using `let` keyword before it is used. Javascript does not hoist the declaration to the top of the function. That's the reason why the output is `ReferenceError: x is not defined` and not `undefined`.
 
-# Data Types in JavaScript
+# 6. Data Types in JavaScript
 
  **Data Type** refers to the type of data we store in programming.
 
-## Number
+## 6.1. Number
 Number datatype is used to store numeric values. It is the combination of integer and floating point numbers.
 - Examples: 1, 2, 3, -1, -5, -100, 10.5, 25.65
 
@@ -274,7 +284,7 @@ Number datatype is used to store numeric values. It is the combination of intege
   console.log(typeof num); // number
   ```
 :memo: **Note:** typeof returns the data type of the variable.
-## String
+## 6.2. String
 String datatype is used to store textual data. It is a sequence of characters which is enclosed in double or single quotes.
 - Example: `"Hello World"` or `'Hello World'`
   ```javascript
@@ -282,7 +292,7 @@ String datatype is used to store textual data. It is a sequence of characters wh
   console.log(typeof str); // string
   ```
 
-## Object
+## 6.3. Object
 - A collection of key-value pairs.
 - Structure: `{<key>: <value>, <key>: <value>,...}`
   ```javascript
@@ -294,8 +304,10 @@ String datatype is used to store textual data. It is a sequence of characters wh
     console.log(typeof obj); // object
     console.log(obj.name); // Pugazharasan C
     console.log(obj["age"]); // 25
+    let key = 'city';
+    console.log(obj[key]); // Trichy
   ```
-### Array
+### 6.3.1. Array
 - A collection of data.
 - Array is a special type of object.
 - The values are stored in the order in which they are added.
@@ -315,14 +327,14 @@ String datatype is used to store textual data. It is a sequence of characters wh
 
 :memo: **Note:** Index starts from zero(0) and goes to length-1.
 
-### Null
+### 6.3.2. Null
 - null is a special keyword that represents the absence of any object value.
   ```javascript
   var obj = null;
   console.log(typeof obj); // object
   ```
 
-## Boolean
+## 6.4. Boolean
 - Boolean is a data type that can only have two values: true or false.
 - Boolean values are used to represent conditions.
 - Example: `if (true) { console.log('True'); }`
@@ -333,7 +345,7 @@ String datatype is used to store textual data. It is a sequence of characters wh
   ```
 :memo: **Note:** All the relational operators return a boolean value.
 
-## Undefined
+## 6.5. Undefined
 - Indicates a variable has been declared but not assigned a value.
 - In an Object literal, if a property is not defined, it is automatically assigned the value of undefined.
 - Value and the type of undefined are undefined.
@@ -351,7 +363,7 @@ String datatype is used to store textual data. It is a sequence of characters wh
     console.log(typeof undefined); // undefined
   ```
 
-## Symbol
+## 6.6. Symbol
 - An immutable primitive value that is unique.
 - Used to create unique identifiers.
 - Example:
@@ -360,7 +372,7 @@ String datatype is used to store textual data. It is a sequence of characters wh
   console.log(typeof symbol); // symbol
   console.log(symbol); // Symbol(symbol)
   ```
-## BigInt
+## 6.7. BigInt
 - A numeric data type that represents integers with arbitrary precision.
 - BigInt is a new data type introduced in ES2020.
 - Example:
@@ -369,7 +381,7 @@ String datatype is used to store textual data. It is a sequence of characters wh
   console.log(typeof bigInt); // bigint
   ```
 
-# Coding Procedure
+# 7. Coding Procedure
 
 When starting a coding project, it's essential to follow a systematic procedure for better clarity and efficiency.
 
@@ -390,11 +402,11 @@ By adhering to this procedure, you create a structured approach to coding, makin
 
 In order to work in CodeKata you need to follow the coding procedure. For detailed explanation you can refer to the following [CODEKATA JS.md](CODEKATA%20JS.md)
 
-# Typecasting in JavaScript
+# 8. Typecasting in JavaScript
 
 Typecasting involves converting data from one type to another, and it's a common operation in programming.
 
-## String to Number
+## 8.1. String to Number
 
 In JavaScript, when converting a string to a number, we have several methods to choose from:
 
@@ -423,8 +435,8 @@ let num = Number("12js4.5"); // NaN
 let num = parseInt("12js4.5"); // 12
 ```
 
-## Array of Strings to Array of Numbers
-### `.map(Number)`
+## 8.2. Array of Strings to Array of Numbers
+### 8.2.1. `.map(Number)`
 
    ```javascript
    var arr = ["10", "20", "30"];
@@ -446,7 +458,7 @@ let num = parseInt("12js4.5"); // 12
    +--------------------+                +-------------------+
    ```
 
-## Number To String
+## 8.3. Number To String
 
 1. **Using `toString`:**
    ```javascript
@@ -467,8 +479,8 @@ let num = parseInt("12js4.5"); // 12
    console.log(str); // "1234"
    ```
 
-# JavaScript Operators
-## Arithmetic Operators
+# 9. JavaScript Operators
+## 9.1. Arithmetic Operators
 Arithmatic operators are used to perform mathematical operations on numbers.
 + **Addition (`+`):**
   ```javascript
@@ -479,7 +491,7 @@ Arithmatic operators are used to perform mathematical operations on numbers.
   ```
   :memo: **Note:** The addition operator can also be used to concatenate strings.
 
-  :info: **Info:** Concatenate means to join two strings together.
+  :information_source: **Info:** Concatenate means to join two strings together.
 
 + **Subtraction (`-`):**
   ```javascript
@@ -513,7 +525,7 @@ Arithmatic operators are used to perform mathematical operations on numbers.
   ```
   :memo: **Note:** The modulus operator returns the remainder of the division of the first number by the second number.
 
-## Relational Operators
+## 9.2. Relational Operators
 Relational operators are used to compare two values. The result of the comparison is either `true` or `false`.
 + **Less Than (`<`):**
   ```javascript
@@ -577,7 +589,7 @@ Relational operators are used to compare two values. The result of the compariso
   console.log(10 !== "10") // true
   ```
 
-## Logical Operators
+## 9.3. Logical Operators
 Logical operators are used to combine the results of two or more expressions which are either `true` or `false`.
 + **Logical AND (`&&`):**
   ```javascript
@@ -599,17 +611,17 @@ Logical operators are used to combine the results of two or more expressions whi
 
 The below table gives the truth table for the logical operators. using this table you can easily understand the logical operators.
 
-| Expression 1  | Expression 2 | AND   |  OR  |  NOT  |
-|:--------------:|:--------------:|:------------:|:-----------:|:------------:|
-|`expr1`|`expr2`|`expr1 && expr2`|`expr1 \|\| expr2`|`!expr1`|
-| true         | true         | true       | true      | false      |
-| true         | false        | false      | true      | false      |
-| false        | true         | false      | true      | true       |
-| false        | false        | false      | false     | true       |
+| Expression 1 | Expression 2 |       AND        |         OR         |   NOT    |
+| :----------: | :----------: | :--------------: | :----------------: | :------: |
+|   `expr1`    |   `expr2`    | `expr1 && expr2` | `expr1 \|\| expr2` | `!expr1` |
+|     true     |     true     |       true       |        true        |  false   |
+|     true     |    false     |      false       |        true        |  false   |
+|    false     |     true     |      false       |        true        |   true   |
+|    false     |    false     |      false       |       false        |   true   |
 
 
 
-## Assignment Operators
+## 9.4. Assignment Operators
 Assignment operators are used to assign values to variables.
 + **Assignment (`=`):**
   ```javascript
@@ -635,7 +647,7 @@ Assignment operators are used to assign values to variables.
   console.log(num); // 200
   ```
 
-## Conditional Operator
+## 9.5. Conditional Operator
 Conditional operator is used to execute a statement if a specified condition is true, otherwise another statement.
 + **Ternary Operator (`? :`):**
   ```javascript
@@ -645,7 +657,7 @@ Conditional operator is used to execute a statement if a specified condition is 
   console.log(result); // num is greater than num2
   ```
 
-## Bitwise Operators
+## 9.6. Bitwise Operators
 Bitwise operators are used to perform bitwise operations on integers.
 + **Bitwise AND (`&`):**
 
@@ -720,18 +732,18 @@ Bitwise operators are used to perform bitwise operations on integers.
   var result = parseInt(num1 / Math.pow(2, num2)); // num1 / num2 ** 2 => 10 / 4 => 2
   console.log(result); // 2
   ```
-# Conditional Statements
+# 10. Conditional Statements
 Conditional statements are used to execute a block of code if a specified condition is true, otherwise another block of code.
-## **If Statement:**
+## 10.1. **If Statement:**
 The if statement is used to execute a block of code if a specified condition is true.
-### Syntax
+### 10.1.1. Syntax
 ```javascript
 if (condition) {
   // code block to be executed
   // if the condition is true
 }
 ```
-### Example
+### 10.1.2. Example
 ```javascript
 let num1 = 10;
 let num2 = 20;
@@ -746,11 +758,11 @@ console.log("The difference is: " + diff); // The difference is: 10
 
 // The difference value is always positive
 ```
-### Output
+### 10.1.3. Output
 ```vbnet
 The difference is: 10
 ```
-### Flowchart
+### 10.1.4. Flowchart
 
 ```mermaid
 graph LR
@@ -762,10 +774,10 @@ graph LR
   E --> G([End])
 ```
 
-## **If...else Statement:**
+## 10.2. **If...else Statement:**
 The if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
 
-### Syntax
+### 10.2.1. Syntax
 ```javascript
 if (condition) {
   // code block to be executed
@@ -777,7 +789,7 @@ else {
   // This block is optional
 }
 ```
-### Example
+### 10.2.2. Example
 ```javascript
 let num1 = 10;
 if(num1 < 0){
@@ -787,11 +799,11 @@ else {
   console.log("num1 is positive");
 }
 ```
-### Output
+### 10.2.3. Output
 ```vbnet
 num1 is positive
 ```
-### Flowchart
+### 10.2.4. Flowchart
 ```mermaid
 graph LR
   A([Start]) --> B[num1 = 10]
@@ -802,9 +814,9 @@ graph LR
   E --> F
 ```
 
-## **If...else if...else Statement:**
+## 10.3. **If...else if...else Statement:**
 The If ... else if... else statement is silimar to the if...else statement. The only difference is that we can have multiple conditions. When the condition is true, the corresponding block of code is executed. If none of the conditions is true, the last block of code is executed.
-### Syntax
+### 10.3.1. Syntax
 ```javascript
 if (condition1) {
   // code block to be executed
@@ -817,7 +829,7 @@ if (condition1) {
   // when none of the conditions is true
 }
 ```
-### Example
+### 10.3.2. Example
 ```javascript
 let num1 = 10;
 if(num1 < 0) {
@@ -828,11 +840,11 @@ if(num1 < 0) {
   console.log("num1 is positive");
 }
 ```
-### Output
+### 10.3.3. Output
 ```vbnet
 num1 is positive
 ```
-### Flowchart
+### 10.3.4. Flowchart
 ```mermaid
 graph LR
   A([Start]) --> B[num1 = 10]
@@ -845,10 +857,10 @@ graph LR
   G --> H
   D --> H
 ```
-## **Nested If...else Statement:**
+## 10.4. **Nested If...else Statement:**
 The nested if...else statement is used to execute a block of code if a specified condition is true, otherwise another block of code.
 
-### Syntax
+### 10.4.1. Syntax
 ```javascript
 if (condition1) {
   // code block to be executed
@@ -872,7 +884,7 @@ if (condition1) {
   }
 }
 ```
-### Example
+### 10.4.2. Example
 ```javascript
 let num1 = 10;
 if(num1 < 0) {
@@ -891,12 +903,12 @@ if(num1 < 0) {
   }
 }
 ```
-### Output
+### 10.4.3. Output
 ```vbnet
 num1 is positive
 num1 is 10
 ```
-### Flowchart
+### 10.4.4. Flowchart
 ```mermaid
 graph LR
   A([Start]) --> B[num1 = 10]
@@ -914,17 +926,17 @@ graph LR
   J --> H
   K --> H
 ```
-# Looping Statements
+# 11. Looping Statements
 Looping statements are used to execute a block of code repeatedly. There are three types of looping statements in JavaScript:
-## **While loop:**
+## 11.1. **While loop:**
    The while loop is a fundamental control flow statement in JavaScript. It repeatedly executes a block of code as long as a specified condition is true. The condition is checked before executing the block of code.
-   ### Syntax
+   ### 11.1.1. Syntax
    ```javascript
    while (condition) {
       // code block to be executed
    }
    ```
-   ### Example
+   ### 11.1.2. Example
    ```javascript
    let count = 0;
 
@@ -935,7 +947,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
 
    console.log("Loop Finished");
    ```
-   ### Output
+   ### 11.1.3. Output
    ```vbnet
    Count: 0
    Count: 1
@@ -944,7 +956,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    Count: 4
    Loop Finished
    ```
-   ### Flowchart
+   ### 11.1.4. Flowchart
    ```mermaid
    graph LR
    A([Start]) --> B[count = 0]
@@ -955,7 +967,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    F --> C
    E --> G([End])
    ```
-   ### Explanation:
+   ### 11.1.5. Explanation:
    + The `while` keyword is followed by a condition in parentheses.
    + If the condition is true, the code block inside the curly braces `{}` is executed.
    + After the block execution, the condition is checked again, and if it's still true, the loop continues.
@@ -963,23 +975,23 @@ Looping statements are used to execute a block of code repeatedly. There are thr
 
    :memo: **Note:** The while loop checks the condition before the block execution. If the condition is initially false, the block of code may not run at all.
 
-## **For loop:**
+## 11.2. **For loop:**
    The for loop is used to execute a block of code a specified number of times or until the condition fails. The condition is checked after executing the block of code.
 
-   ### Syntax
+   ### 11.2.1. Syntax
    ```javascript
    for (initialization; condition; alteration) {
       // code block to be executed
    }
    ```
-   ### Example
+   ### 11.2.2. Example
    ```javascript
    for (var i = 1; i <= 5; i++) {
       console.log(i); // 1, 2, 3, 4, 5
    }
    console.log("Done");
    ```
-   ### Output
+   ### 11.2.3. Output
    ```vbnet
    1
    2
@@ -988,7 +1000,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    5
    Done
    ```
-   ### Flowchart
+   ### 11.2.4. Flowchart
    ```mermaid
    graph LR
    A([Start]) --> B[i = 1]
@@ -1000,7 +1012,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    E --> G([End])
    ```
 
-   ### Explanation:
+   ### 11.2.5. Explanation:
    + The `for` keyword is followed by three expressions in parentheses, separated by semicolons.
      + The first expression is executed only once, when the loop starts. This expression is used to initialize the loop variable.
      + The second expression is evaluated before every iteration of the loop. If the expression evaluates to `true`, the loop body is executed. If the expression evaluates to `false`, the loop terminates.
@@ -1016,15 +1028,15 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    }
    console.log("Done");
    ```
-## do...while loop
+## 11.3. do...while loop
    The do...while loop is used to execute a block of code at least once. The condition is checked before executing the block of code.
-   ### Syntax
+   ### 11.3.1. Syntax
    ```javascript
    do {
       // code block to be executed
       } while (condition);
    ```
-   ### Example
+   ### 11.3.2. Example
    ```javascript
    let count = 0;
    do {
@@ -1033,7 +1045,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    } while (count < 5);
    console.log("Loop Finished");
    ```
-   ### Output
+   ### 11.3.3. Output
    ```vbnet
    Count: 0
    Count: 1
@@ -1042,7 +1054,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    Count: 4
    Loop Finished
    ```
-   ### Flowchart
+   ### 11.3.4. Flowchart
    ```mermaid
    graph LR
    A([Start]) --> B[count = 0]
@@ -1056,7 +1068,7 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    ```
 
 
-   ### Explanation:
+   ### 11.3.5. Explanation:
    + The `do` keyword is followed by a block of code.
    + The block of code is executed at least once.
    + The `while` keyword is followed by a condition in parentheses.
@@ -1067,12 +1079,12 @@ Looping statements are used to execute a block of code repeatedly. There are thr
    + The do...while loop is similar to the while loop but the condition is checked after executing the block of code.
    + The do...while loop is useful when you want to execute a block of code at least once.
 
-# Branching Statement
+# 12. Branching Statement
 Branching statements are used to execute different blocks of code depending on the value of a condition.
 
-## **switch statement:**
+## 12.1. **switch statement:**
 The switch statement is used to execute one of multiple blocks of code depending on the value of a variable.
-### Syntax
+### 12.1.1. Syntax
 ```javascript
 switch (expression) {
   case value1:
@@ -1085,7 +1097,7 @@ switch (expression) {
     // code block to be executed if expression is different from value1 and value2
 }
 ```
-### Example
+### 12.1.2. Example
 ```javascript
 let day = "Monday";
 switch (day) {
@@ -1114,11 +1126,11 @@ switch (day) {
     console.log("Invalid day");
 }
 ```
-### Output
+### 12.1.3. Output
 ```vbnet
 Today is Monday
 ```
-### Flowchart
+### 12.1.4. Flowchart
 ```mermaid
 graph LR
 A([Start]) --> B[day = 'Monday']
@@ -1148,7 +1160,7 @@ R -->|false| T[/Invalid day/]
 T --> G
 
 ```
-### Explanation:
+### 12.1.5. Explanation:
 + The switch statement is used to compare a value with multiple values.
 + Switch is an alternative to if...else if...else statements.
 + The `switch` keyword is followed by an expression in parentheses.
@@ -1157,3 +1169,106 @@ T --> G
 + If the expression doesn't match any case value, the code block inside the default case is executed.
 + The `break` keyword is used to terminate the switch statement.
 
+# 13. Break and Continue
+
+## 13.1. Break
++ The break statement is used to terminate the execution of a loop or switch statement.
+  ### 13.1.1. Syntax
+  ```javascript
+  break;
+  ```
+  ### 13.1.2. Example
+  ```javascript
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruits[i] == "Mango") {
+      break; // Terminates the loop
+      console.log("Mango Found"); // This statement is not executed
+    }
+    console.log(fruits[i]); // Banana, Orange, Apple
+  }
+  console.log("Loop Finished"); // This statement is executed after the loop terminates
+  ```
+  ### 13.1.3. Output
+  ```vbnet
+  Banana
+  Orange
+  Apple
+  Loop Finished
+  ```
+
+## 13.2. Continue
++ The continue statement is used to skip the rest of the code in the current iteration of the loop and continue with the next iteration.
+  ### 13.2.1. Syntax
+  ```javascript
+  continue;
+  ```
+  ### 13.2.2. Example
+  ```javascript
+  let fruits = ["Banana", "Orange", "Apple", "Mango"];
+  for (var i = 0; i < fruits.length; i++) {
+    if (fruits[i] == "Apple") {
+      continue; // Skips the rest of the code in the current iteration of the loop and continues with the next iteration
+    }
+    console.log(fruits[i]); // Banana, Orange, Mango
+  }
+  console.log("Loop Finished"); // This statement is executed after the loop ends
+  ```
+  ### 13.2.3. Output
+  ```vbnet
+  Banana
+  Orange
+  Mango
+  Loop Finished
+  ```
+# 14. Other Loops
+## 14.1. **for...in loop:**
+  + The for...in loop is used to iterate over the properties of an object.
+    ### Syntax
+    ```javascript
+    for (variable in object) {
+      // code block to be executed
+    }
+    ```
+    ### Example
+    ```javascript
+    let person = {
+      name: "Pugazharasan C",
+      age: 25,
+      city: "Chennai"
+      };
+      for (var property in person) {
+        console.log(property, '=>', person[property]); // name => Pugazharasan C, age => 25, city => Chennai
+      }
+      ```
+    ### Output
+    ```vbnet
+    name => Pugazharasan C
+    age => 25
+    city => Chennai
+    ```
+
+## 14.2. **for...of loop:**
+  + The for...of loop is used to iterate over the values of an iterable object.
+      ### Syntax
+      ```javascript
+      for (variable of iterable) {
+        // code block to be executed
+        }
+      ```
+      ### Example
+      ```javascript
+      let fruits = ["Banana", "Orange", "Apple", "Mango"];
+      for (var fruit of fruits) {
+        console.log(fruit); // Banana, Orange, Apple, Mango
+      }
+      ```
+      ### Output
+      ```vbnet
+      Banana
+      Orange
+      Apple
+      Mango
+      ```
+
+## 14.3. **Thank you for reading my article.**
