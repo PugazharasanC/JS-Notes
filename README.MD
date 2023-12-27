@@ -48,7 +48,6 @@ Table of Contents
 - [14. Other Loops](#14-other-loops)
   - [14.1. **for...in loop:**](#141-forin-loop)
   - [14.2. **for...of loop:**](#142-forof-loop)
-  - [14.3. **Thank you for reading my article.**](#143-thank-you-for-reading-my-article)
 
 
 # 2. JavaScript
@@ -1270,5 +1269,13 @@ T --> G
       Apple
       Mango
       ```
+---
 
-## 14.3. **Thank you for reading my article.**
+*Thank you for taking the time to read my article. Your engagement is the driving force behind the words on these pages. Whether you found information, inspiration, or simply enjoyed the content, your presence is deeply appreciated. Writing is a shared journey, and I'm grateful to have you as a reader. Cheers to the joy of exploration and discovery! 🌟*
+
+*If you enjoyed the article, consider giving it more stars!*
+
+*With gratitude,*
+
+*Pugazharasan C*
+
