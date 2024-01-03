@@ -399,7 +399,7 @@ When starting a coding project, it's essential to follow a systematic procedure 
 
 By adhering to this procedure, you create a structured approach to coding, making it easier to understand, maintain, and debug your code.
 
-In order to work in CodeKata you need to follow the coding procedure. For detailed explanation you can refer to the following [CODEKATA JS.md](CODEKATA%20JS.md)
+In order to work in CodeKata you need to follow the coding procedure. For detailed explanation you can refer to the following [CODEKATA_JS.md](CODEKATA_JS.md)
 
 # 8. Typecasting in JavaScript
 
