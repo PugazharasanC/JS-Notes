@@ -21,7 +21,7 @@ console.log(newArray);
 ```
 
 ### Output:
-```
+```javascript
 [2, 4, 6, 8, 10]
 ```
 
@@ -50,7 +50,7 @@ console.log(resultObject);
 ```
 
 ### Output:
-```
+```javascript
 { '1': 2, '2': 3, '3': 2, '4': 3, '5': 2 }
 ```
 
@@ -74,7 +74,7 @@ console.log(sum);
 ```
 
 ### Output:
-```
+```js
 15
 ```
 
@@ -104,7 +104,7 @@ console.log(evenNumbers);
 ```
 
 ### Output:
-```
+```javascript
 [ 2, 4]
 ```
 
