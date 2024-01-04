@@ -301,9 +301,6 @@ fairy.revealPower();  // Output: The revealed power: Nature Magic
 console.log(fairy.power);  // Output: Nature Magic
 ```
 
-## :key: Unveiling the Mysteries of Properties
-
-In the enchanting world of JavaScript, properties play a pivotal role in shaping the characteristics of objects. Let's embark on a journey to uncover the secrets of properties.
 
 ### :closed_lock_with_key: Private Property
 

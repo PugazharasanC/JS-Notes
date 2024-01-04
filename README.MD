@@ -457,6 +457,7 @@ let num = parseInt("12js4.5"); // 12
    +--------------------+                +-------------------+
    ```
 
+   :book: **Details:** For a comprehensive understanding of Map, refer to the information outlined in [MRF.md](MRF.md).
 ## 8.3. Number To String
 
 1. **Using `toString`:**
