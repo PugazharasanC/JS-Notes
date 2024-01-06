@@ -26,12 +26,12 @@ function sayHello(name) {
   console.log(`Love whispers: Hello, ${name}!`);
 }
 
-sayHello("Alice"); // A tender greeting: Hello, Alice!
+sayHello("Hermione Granger"); // A tender greeting: Hello, Hermione Granger!
 ```
 
 ### Output
 ```yaml
-Love whispers: Hello, Alice!
+Love whispers: Hello, Hermione Granger!
 ```
 
 **Explanation:**
@@ -143,14 +143,14 @@ function greetPerson(name, greeting = "Hello") {
   console.log(`Sweet words exchanged: ${greeting}, ${name}!`);
 }
 
-greetPerson("Bob"); // A warm embrace: Hello, Bob!
-greetPerson("Alice", "Hi"); // A playful exchange: Hi, Alice!
+greetPerson("Harry Potter"); // A warm embrace: Hello, Harry Potter!
+greetPerson("Hermione Granger", "Hi"); // A playful exchange: Hi, Hermione Granger!
 ```
 
 ### Output
 ```yaml
-Sweet words exchanged: Hello, Bob!
-Sweet words exchanged: Hi, Alice!
+Sweet words exchanged: Hello, Harry Potter!
+Sweet words exchanged: Hi, Hermione Granger!
 ```
 
 **Explanation:**

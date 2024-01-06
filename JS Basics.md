@@ -45,8 +45,8 @@ Naming conventions contribute to code readability. Here are some commonly used c
 
 - **Camel Case:**
   ```javascript
-  var firstName = "John";
-  var lastName = "Doe";
+  var firstName = "Pugazharasan";
+  var lastName = "Chandrasekar";
   ```
 
 - **Pascal Case:**
@@ -61,8 +61,8 @@ Naming conventions contribute to code readability. Here are some commonly used c
 
 - **Snake Case:**
   ```javascript
-  var first_name = "John";
-  var last_name = "Doe";
+  var first_name = "Pugazharasan";
+  var last_name = "Chandrasekar";
   ```
 
 - **Constant Case:**
