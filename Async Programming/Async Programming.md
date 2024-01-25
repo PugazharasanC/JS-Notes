@@ -66,7 +66,7 @@ Once a Web API completes an asynchronous task, it places the corresponding callb
 
 The Event Loop, resembling a vigilant director, constantly scans the Call Stack and Callback Queue. If the Call Stack is vacant, it takes the first callback from the Queue and seamlessly transitions it to the spotlight.
 
-## Visual Representation of Asynchronous Execution: A Cinematic Flowchart
+## Visual Representation of Asynchronous Execution
 
 ```mermaid
 graph LR
