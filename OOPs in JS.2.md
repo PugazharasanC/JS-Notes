@@ -1,5 +1,6 @@
 
-# 🌌 Chapter 3: The Four Pillars of JavaScript Magic
+
+# 🌌The Four Pillars of JavaScript Magic
 
 Greetings, fellow sorcerers! 🧙‍♂️✨
 
